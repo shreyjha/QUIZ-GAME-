@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> QUIZ GAME! </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-box">
+        <h1 id="game-name"> QUIZ GAME! </h1>
+        <div id="count-box"></div>
+        <div id="question"></div>
+        <div id="topic"></div>
+        <div id="answers">
+            <button id="btn-1" class="ans-btn" onclick="checkAnswer1()">-</button>
+            <button id="btn-2" class="ans-btn" onclick="checkAnswer2()">-</button>
+            <button id="btn-3" class="ans-btn" onclick="checkAnswer3()">-</button>
+            <button id="btn-4" class="ans-btn" onclick="checkAnswer4()">-</button>
+        </div>
+        <div id="btn-container">
+        <button id="play-game" onclick="startGame()"> PLAY </button>
+        <button id="next-question" onclick="nextQuestion()"> NEXT </button>
+        <button id="submit-btn" onclick="submitGame()"> SUBMIT </button>
+        </div>
+    </div>
+    <div id="start-games">
+        <p> LET'S PLAY? </p>
+    </div>
+    <div id="finish-games">
+        <p> SUBMIT? </p>
+    </div>
+    <div id="final-score">
+        <p id="f-score"></p>
+        <p id="final-message"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

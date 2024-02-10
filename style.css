@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #BFCFE7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-box {
+    height: 80%;
+    width: 40%;
+    background-color: white;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 80px;
+}
+
+#game-name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 20%;
+    font-size: 195%;
+}
+
+#count-box {
+    height: 32px;
+    width: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightgray;
+    color: #525CEB;
+    font-weight: bold;
+}
+
+#question {
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#topic {
+    background-color: aquamarine;
+    padding: 2px 5px 2px 5px;
+    border-radius: 4px;
+    background-color: #525CEB;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#answers {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ans-btn {
+    height: 32px;
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #525CEB;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    border-bottom: 3px solid #383FA1;
+    transition: all 0.15s ease-out 0s;
+    cursor: pointer;
+}
+
+.ans-btn:hover {
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid rgb(161, 161, 161);
+    border-top: 0.1px solid rgb(161, 161, 161);
+    border-right: 0.1px solid rgb(161, 161, 161);
+    border-left: 0.1px solid rgb(161, 161, 161);
+}
+
+.ans-btn:active {
+    transform: scale(0.98);
+}
+
+#btn-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#play-game {
+    padding: 1.5%;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    border-bottom: 3px solid rgb(161, 161, 161);
+    transition: all 0.15s ease-out 0s;
+    cursor: pointer;
+}
+
+#play-game:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+#play-game:active {
+    transform: scale(0.98);
+}
+
+#next-question {
+    padding: 1.5%;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    border-bottom: 3px solid rgb(161, 161, 161);
+    transition: all 0.15s ease-out 0s;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#next-question:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+#next-question:active {
+    transform: scale(0.98);
+}
+
+#submit-btn {
+    padding: 1.5%;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    border-bottom: 3px solid rgb(161, 161, 161);
+    transition: all 0.15s ease-out 0s;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+#submit-btn:active {
+    transform: scale(0.98);
+}
+
+#start-games {
+    height: 38%;
+    width: 40%;
+    background-color: #525CEB;
+    position: fixed;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+#start-games p {
+    font-size: 320%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-weight: lighter;
+}
+
+#finish-games {
+    height: 48%;
+    width: 40%;
+    background-color: #525CEB;
+    position: fixed;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    letter-spacing: 1px;
+}
+
+#finish-games p {
+    font-size: 320%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-weight: lighter;
+}
+
+#final-score {
+    height: 48%;
+    width: 40%;
+    background-color: #525CEB;
+    position: fixed;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    gap: 6%;
+}
+
+#final-score p {
+    font-size: 250%;
+    font-weight: lighter;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 600px) {
+    #game-box {
+        width: 90%;
+    }
+
+    body {
+        text-align: center;
+    } 
+
+    #start-games {
+        height: 28%;
+        width: 80%;
+    }
+
+    #finish-games {
+        height: 32%;
+        width: 80%;
+    }
+
+    #final-score {
+        height: 32%;
+        width: 80%;
+    }
+}
+
+
